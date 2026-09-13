@@ -1,0 +1,35 @@
+# Spec-and-prompt hygiene (coordinator requirement)
+SPEC*
+*EXTREME*
+PROMPT*
+REVIEW*
+FIX_PROMPT*
+SELFREVIEW*
+DRAFT*
+REPORT*
+INTERFACES*
+STATUS*
+BUILD_PROMPT.md
+agiProducts.ts
+agiResearch.ts
+
+# Build artifacts
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+
+# Local runtime artifacts
+*.log
+.coverage
+coverage/
+tmp/
+*.db
+*.sqlite
+*.sqlite3

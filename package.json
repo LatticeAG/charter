@@ -1,0 +1,32 @@
+{
+  "name": "charter",
+  "version": "0.1.0",
+  "description": "LatticeAGI Charter zone core: versioned signed charters and gateway allow/deny per charter/1.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "bin": {
+    "charter": "./bin/charter"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./fixtures": "./fixtures/corpus.ts",
+    "./python": "./latticeagi_charter/__init__.py"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "test": "node --test test/*.test.ts",
+    "test:vectors": "node --test test/vectors-offline.test.ts test/vectors-gateway.test.ts test/vectors-cli.test.ts",
+    "test:python": "node --test test/vectors-python.test.ts",
+    "test:campaign": "node --test test/campaign.test.ts",
+    "ci": "npm run typecheck && npm test",
+    "charter": "node src/cli/main.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  }
+}
