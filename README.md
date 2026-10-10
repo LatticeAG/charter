@@ -55,14 +55,18 @@ cd python && python3 -m latticeagi_charter --help
 ## Quick start (local emulator)
 
 ```sh
-# 1. Write a config (see examples/charter.local.yaml) and provision env secrets:
+# 1. Write a config and provision env secrets. `examples/` ships a ready-made
+#    local set — charter.local.yaml plus the fixture trust.json/manifest.json it
+#    references (RFC 8032 fixture material; `environment: "local"` only —
+#    production configs reject it):
 export CHARTER_CLIENT_CREDENTIAL=<base64url-32-byte-bearer>
 export CHARTER_AUTH_RECORDS=<base64url J(auth-file)>
 export CHARTER_AUDIT_SEED=<base64url-32-byte-ed25519-seed>
 export CHARTER_RESPONSE_KEYS=<base64url J(encryption-keys)>
 
-# 2. Boot the loopback emulator
-./bin/charter serve --local --config ./charter.yaml --json
+# 2. Boot the loopback emulator (root_file/manifest_file resolve relative to the
+#    config file, so the shipped examples/ set boots as-is)
+./bin/charter serve --local --config examples/charter.local.yaml --json
 
 # 3. Lint, sign, bundle, publish, pin, call
 ./bin/charter policy lint policy.yaml --manifest manifest.json --root trust.json

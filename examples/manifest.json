@@ -1,0 +1,58 @@
+{
+  "schema": "charter.manifest/1",
+  "gateway_id": "cgw_AAAAAAAAAAAAAAAAAAAAA",
+  "engine": "charter.eval/1",
+  "resource_grammar": "segments/1",
+  "adapter_build_hash": "966e0fc4f99d6c6da89a2ee02fc7dc382244013a6016f53fffed7c91339f8623",
+  "tools": [
+    {
+      "tool": "record.delete",
+      "binding": "RECORDS",
+      "operation": "delete",
+      "args": []
+    },
+    {
+      "tool": "record.export",
+      "binding": "RECORDS",
+      "operation": "export",
+      "args": [
+        {
+          "name": "destination",
+          "kind": "string",
+          "max_bytes": 64
+        }
+      ]
+    },
+    {
+      "tool": "record.get",
+      "binding": "RECORDS",
+      "operation": "get",
+      "args": []
+    },
+    {
+      "tool": "record.list",
+      "binding": "RECORDS",
+      "operation": "list",
+      "args": [
+        {
+          "name": "limit",
+          "kind": "integer",
+          "min": 1,
+          "max": 100
+        }
+      ]
+    },
+    {
+      "tool": "record.put",
+      "binding": "RECORDS",
+      "operation": "put",
+      "args": [
+        {
+          "name": "value",
+          "kind": "string",
+          "max_bytes": 4096
+        }
+      ]
+    }
+  ]
+}
