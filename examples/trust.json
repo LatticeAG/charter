@@ -1,0 +1,28 @@
+{
+  "schema": "charter.root/1",
+  "tenant_id": "cte_AAAAAAAAAAAAAAAAAAAAA",
+  "charter_id": "cch_AAAAAAAAAAAAAAAAAAAAA",
+  "gateway_id": "cgw_AAAAAAAAAAAAAAAAAAAAA",
+  "log_id": "clg_AAAAAAAAAAAAAAAAAAAAA",
+  "bootstrap": {
+    "threshold": 2,
+    "keys": [
+      {
+        "key_id": "cky_AAAAAAAAAAAAAAAAAAAAA",
+        "public_key": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a"
+      },
+      {
+        "key_id": "cky_BBBBBBBBBBBBBBBBBBBBB",
+        "public_key": "3d4017c3e843895a92b70aa74d1b7ebc9c982ccf2ec4968cc0cd55f12af4660c"
+      }
+    ]
+  },
+  "audit_keys": [
+    {
+      "key_id": "cky_CCCCCCCCCCCCCCCCCCCCC",
+      "public_key": "fc51cd8e6218a1a38da47ed00230f0580816ed13ba3303ac5deb911548908025",
+      "from_seq": 1,
+      "through_seq": null
+    }
+  ]
+}
